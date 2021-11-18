@@ -1,0 +1,67 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "ROS: catkin_make my_msgs",
+            "type": "shell",
+            "command": "catkin_make",
+            "args": [
+                "--pkg",
+                "my_msgs",
+                "-j4",
+                "-DCMAKE_BUILD_TYPE=Debug"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "ROS: catkin_make Data",
+            "type": "shell",
+            "command": "catkin_make",
+            "args": [
+                "--pkg",
+                "data",
+                "-j4",
+                "-DCMAKE_BUILD_TYPE=Debug"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "ROS: catkin_make Head",
+            "type": "shell",
+            "command": "catkin_make",
+            "args": [
+                "--pkg",
+                "head",
+                "-j4",
+                "-DCMAKE_BUILD_TYPE=Debug"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "catkin_make",
+            "args": [
+                "--directory",
+                "/home/pi/WS6/ArRobot_ws6-1",
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+            ],
+            "problemMatcher": [
+                "$catkin-gcc"
+            ],
+            "group": "build",
+            "label": "catkin_make: build"
+        }
+    ]
+}
+
